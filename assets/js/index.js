@@ -97,7 +97,37 @@ $(document).ready(function() {
                 items:1
             }
         }
-    })
+    });
+    
+    $(document).ready(function() {
+        // Initially hide all dropdown menus
+        $('.dropdown-menu').hide();
+      
+        // Toggle the dropdown on click
+        $('.dropdown-toggle').on('click', function(event) {
+          event.preventDefault();
+      
+          // Get the next sibling element which is the dropdown menu
+          var $dropdown = $(this).next('.dropdown-menu');
+      
+          // Close all dropdowns except the one clicked
+          $('.dropdown-menu').not($dropdown).slideUp().prev('.dropdown-toggle').removeClass('active');
+          
+          // Toggle the current dropdown menu
+          $dropdown.stop(true, true).slideToggle();
+          $(this).toggleClass('active');
+        });
+      
+        // Close the dropdowns if clicked outside the menu
+        $(document).on('click', function(event) {
+          if (!$(event.target).closest('.dropdown').length) {
+            $('.dropdown-menu').slideUp();
+            $('.dropdown-toggle').removeClass('active');
+          }
+        });
+      });
+      
+    
 
 
 

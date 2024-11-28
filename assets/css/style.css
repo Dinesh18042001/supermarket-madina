@@ -110,8 +110,14 @@ html {
 .drop_down li {
     list-style: none;
 }
+
 /* manu haver end */
 
+.offcanvas-body{
+ overflow-y: hidden;
+}
+
+/* Dropdown menu styles */
 .offcanvas-body .drop_down {
     position: absolute;
     top: 110%;
@@ -121,7 +127,6 @@ html {
     background: #fff;
     padding: 10px 20px;
     z-index: 99;
-    width: 233px;
     width: 250px;
     opacity: 0;
     visibility: hidden;
@@ -129,7 +134,28 @@ html {
     list-style: none;
     border: 2px solid var(--secondary-color);
     border-radius: 10px;
-}
+  }
+  
+  /* When dropdown is toggled (active) */
+  .offcanvas-body .nav-item.dropdown.active>.drop_down {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .offcanvas-body .dropdown-menu {
+    padding: 10px;
+    margin-top: 20px;
+  }
+
+  .offcanvas-body .dropdown ul li{
+    border-bottom: 1px solid #959393 !important;
+    padding: 5px 0px;
+  }
+  
+
+
+
+
 
 .nav-item .dropdown {
     width: 130px;

@@ -27,13 +27,11 @@
   <div class="nav-parent">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
-
         <div class="logo">
-            <a href="index.html">
-                <img src="assets/images/logo.svg" alt="" />
-            </a>
-        </div>
-
+          <a href="index.html">
+              <img src="assets/images/logo.svg" alt="" />
+          </a>
+      </div>
         <a data-bs-toggle="offcanvas" href="#offcanvasNavbar" role="button" aria-controls="offcanvasNavbar"
           class="d-lg-none">
           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-list"
@@ -47,12 +45,19 @@
 
             <li class="nav-item me-5">
               <div class="search-bar d-flex align-items-center ">
-                <select class="form-select category-dropdown">
-                  <option selected>Category</option>
-                  <option value="1">Category 1</option>
-                  <option value="2">Category 2</option>
-                  <option value="3">Category 3</option>
-                </select>
+                <div class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle me-5" href="#" id="mobileServicesDropdown" role="button"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      Categories
+                  </a>
+                  <ul class="drop_down">
+                      <li class="mb-3"><a href="frozenseafood.html">Frozen Sea Food</a></li>
+                      <li class="mb-3"><a href="#">Fish Products Frozen Vegetables/Snacks</a></li>
+                      <li class="mb-3"><a href="#">Frozen/Normal Indian Sweets</a></li>
+                      <li class="mb-3"><a href="#">Frozen Parathas/Chapati/Naan</a></li>
+                      <li class="mb-3"><a href="#">Fresh Vegetables, Fresh Fruits</a></li>
+                  </ul>
+              </div>
                 <input type="text" class="form-control search-input" placeholder="Search Product" />
                 <button class="btn search-btn">Search</button>
               </div>
@@ -60,12 +65,12 @@
 
 
             <li class="nav-item d-flex align-items-center">
-              <!-- <span><i class="fa-regular fa-heart"></i></span>
-              <a class="nav-link active" aria-current="page" href="#">Wishlist</a> -->
+              <span><i class="fa-regular fa-heart"></i></span>
+              <a class="nav-link active" aria-current="page" href="#">Wishlist</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Login/Sign up</a>
-            </li>
+            </li> -->
           </ul>
 
           <div class="callbtn ms-4">
@@ -85,6 +90,7 @@
 
   <!-- Mobile Nav -->
   <!-- Mobile Nav -->
+   
   <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
     <div class="offcanvas-header">
       <img src="assets/images/logo.svg" alt="">
@@ -102,6 +108,26 @@
         </li>
         <hr>
         <li class="nav-item">
+          <a class="nav-link" href="shop.html">shop</a>
+        </li>
+        <hr>
+        <li class="nav-item">
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle me-5" href="#" id="mobileServicesDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Categories
+            </a>
+            <ul class="drop_down">
+                <li class="mb-3"><a href="frozenseafood.html">Frozen Sea Food</a></li>
+                <li class="mb-3"><a href="#">Fish Products Frozen Vegetables/Snacks</a></li>
+                <li class="mb-3"><a href="#">Frozen/Normal Indian Sweets</a></li>
+                <li class="mb-3"><a href="#">Frozen Parathas/Chapati/Naan</a></li>
+                <li class="mb-3"><a href="#">Fresh Vegetables, Fresh Fruits</a></li>
+            </ul>
+        </div>
+        </li>
+        <hr>
+        <li class="nav-item">
           <a class="nav-link" href="gallery.html">Gallery</a>
         </li>
         <hr>
@@ -110,10 +136,7 @@
         </li>
         <hr>
 
-        <li class="nav-item">
-          <a class="nav-link" href="shop.html">shop</a>
-        </li>
-        <hr>
+        
 
         <div class="offcanvas-contact-btn mt-3">
           <a href="contact.html">Contact</a>
@@ -177,7 +200,6 @@
                 </a>
                 
             </div>
-
 
             <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
                 <a href="#">
